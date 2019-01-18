@@ -31,7 +31,7 @@ class _FriendsState extends State<Friends> {
     ];
     return Scaffold(
       appBar: AppBar(title:Text("好友列表"),elevation:0.0,),
-      backgroundColor:Colors.red,
+      backgroundColor:Colors.white,
       body:ListView.separated(
         itemCount: _friendList.length,
         separatorBuilder:(BuildContext sContext, int sIndex){

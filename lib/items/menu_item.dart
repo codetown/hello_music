@@ -6,10 +6,12 @@ class MenuItem extends StatelessWidget {
       this.iconData,
       this.iconColor = Colors.grey,
       this.title,
-      this.titleColor =const Color(0xff555555)});
+      this.count=0,
+      this.titleColor = const Color(0xff555555)});
   final IconData iconData;
   final Color iconColor;
   final String title;
+  final int count;
   final Color titleColor;
 
   @override
@@ -27,11 +29,14 @@ class MenuItem extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Text(
-            title,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 18.0, color: titleColor),
+          child: Text.rich(
+            TextSpan(children: <TextSpan>[
+              TextSpan(text: title,style: TextStyle(fontSize: 14.0,color:titleColor,fontWeight:FontWeight.w600)),
+              TextSpan(
+                text: "  ($count)",
+                style: TextStyle(fontSize: 12.0, color: Colors.grey),
+              ),
+            ]),
           ),
         ),
         SizedBox(

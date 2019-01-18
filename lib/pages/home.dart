@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_music/items/friend_item.dart';
 import 'package:hello_music/items/menu_item.dart';
+import 'package:hello_music/items/music_item.dart';
 
 class Home extends StatefulWidget {
   Home({
@@ -24,6 +24,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.menu),
@@ -58,7 +59,7 @@ class _HomeState extends State<Home> {
           IconButton(
             icon: Icon(Icons.pool),
             onPressed: () {},
-          ) 
+          )
         ],
         centerTitle: true,
         elevation: 0.0,
@@ -68,7 +69,7 @@ class _HomeState extends State<Home> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            //什么区域
+            //资料卡片区域
             Container(
               decoration: BoxDecoration(color: Colors.red),
               padding: EdgeInsets.all(4.0),
@@ -142,7 +143,7 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         height: 20.0,
-                        child: MaterialButton(
+                        child: RawMaterialButton(
                           onPressed: () {},
                           padding: EdgeInsets.all(0.0),
                           child: Row(
@@ -172,32 +173,116 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            Divider(height: 1.0),
+            Divider(
+              height: 1.0,
+              indent: 50.0,
+            ),
             RawMaterialButton(
-              child: MenuItem(iconData: Icons.folder_open, title: '本地音乐'),
+              child: MenuItem(
+                iconData: Icons.folder_open,
+                iconColor: Colors.red,
+                title: '本地音乐',
+                count: 99,
+              ),
+              onPressed: () {},
+            ),
+            Divider(
+              height: 1.0,
+              indent: 50.0,
+            ),
+            RawMaterialButton(
+              child: MenuItem(
+                iconData: Icons.file_download,
+                iconColor: Colors.red,
+                title: '下载管理',
+                count: 99,
+              ),
+              onPressed: () {},
+            ),
+            Divider(
+              height: 1.0,
+              indent: 50.0,
+            ),
+            RawMaterialButton(
+              child: MenuItem(
+                iconData: Icons.tv,
+                title: '我的电台',
+                iconColor: Colors.red,
+                count: 99,
+              ),
+              onPressed: () {},
+            ),
+            Divider(
+              height: 1.0,
+              indent: 50.0,
+            ),
+            RawMaterialButton(
+              child: MenuItem(
+                iconData: Icons.timer,
+                title: '最近播放',
+                iconColor: Colors.red,
+                count: 99,
+              ),
               onPressed: () {},
             ),
             Divider(height: 1.0),
-            MenuItem(iconData: Icons.file_download, title: '下载管理'),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                    width: 30.0,
+                    height: 30.0,
+                    child: RawMaterialButton(
+                      elevation: 0.0,
+                      highlightElevation: 0.0,
+                      child: Icon(
+                        Icons.arrow_drop_down,
+                        color: Colors.grey,
+                      ),
+                      onPressed: () {},
+                    )),
+                Expanded(
+                  child: Text("我整理的歌单", style: TextStyle(fontSize: 16.0)),
+                ),
+                SizedBox(
+                  width: 30.0,
+                  height: 30.0,
+                  child: RawMaterialButton(
+                    elevation: 0,
+                    highlightElevation: 0,
+                    child: Icon(
+                      Icons.settings,
+                      color: Colors.grey[300],
+                      size: 20.0,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+                SizedBox(
+                  width: 10.0,
+                  height: 30.0,
+                ),
+              ],
+            ),
             Divider(height: 1.0),
-            MenuItem(iconData: Icons.tv, title: '我的电台'),
-            Divider(height: 1.0),
-            MenuItem(iconData: Icons.timer, title: '最近播放'),
-            Divider(height: 1.0),
-            Text.rich(TextSpan(children: <TextSpan>[
-              TextSpan(text: "本地音乐"),
-              TextSpan(
-                text: "(96)",
-                style: TextStyle(fontSize: 14.0, color: Colors.grey),
+            Container(
+              padding:EdgeInsets.only(left:8.0,right:8.0,top:4.0,bottom:4.0),
+              child: MusicItem(
+                imgUrl:"https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/9358d109b3de9c8263c93f496e81800a18d8434c.jpg",
+                title:"我最喜欢的音乐",
+                subtitle:"我最喜欢的音乐",
               ),
-            ])),
-            Divider(height: 1.0),
-            RawMaterialButton(
-              fillColor: Colors.white,
-              padding: EdgeInsets.all(8.0),
-              child:FriendItem(imgUrl:'http://192.168.31.208/upload/timg.jpg',title:'孙悟空',subtitle:'齐天大圣'),
-              onPressed: (){},
-            )
+            ),
+             Divider(height: 1.0,indent:64.0,),
+            Container(
+              padding:EdgeInsets.only(left:8.0,right:8.0,top:4.0,bottom:4.0),
+              child: MusicItem(
+                imgUrl:"https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/9358d109b3de9c8263c93f496e81800a18d8434c.jpg",
+                title:"我最喜欢的音乐",
+                subtitle:"我最喜欢的音乐",
+              ),
+            ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.

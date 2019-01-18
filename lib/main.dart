@@ -9,7 +9,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes:<String,WidgetBuilder>{
-        "Friends":(BuildContext context)=>Friends(),
+        "Friends":(_)=>Friends(),
+        "Musics":(_)=>Friends(),
+        "MusicLists":(_)=>Friends(),
       },
       title: 'Hello Music',
       theme: ThemeData(
