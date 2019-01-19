@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
 import 'package:hello_music/pages/friends.dart';
+import 'package:hello_music/pages/cloud.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
         "Friends":(_)=>Friends(),
         "Musics":(_)=>Friends(),
         "MusicLists":(_)=>Friends(),
+        "Cloud":(_)=>Cloud()
       },
       title: 'Hello Music',
       theme: ThemeData(

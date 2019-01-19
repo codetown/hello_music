@@ -24,8 +24,7 @@ class MusicItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              alignment: Alignment.bottomLeft,
-              padding: EdgeInsets.only(left: 8.0, right: 8.0),
+              padding: EdgeInsets.only(left: 8.0, right: 8.0,top:4.0),
               height: 24.0,
               child: Text(
                 title,
@@ -39,8 +38,8 @@ class MusicItem extends StatelessWidget {
             ),
             Container(
               height: 24.0,
-              alignment: Alignment.topLeft,
-              padding: EdgeInsets.only(left: 8.0, right: 8.0),
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.only(left: 8.0, right:8.0,bottom:6.0),
               child: Text(
                 subtitle,
                 maxLines: 1,
