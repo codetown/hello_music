@@ -31,7 +31,7 @@ class MenuItem extends StatelessWidget {
         Expanded(
           child: Text.rich(
             TextSpan(children: <TextSpan>[
-              TextSpan(text: title,style: TextStyle(fontSize: 14.0,color:titleColor,fontWeight:FontWeight.w600)),
+              TextSpan(text: title,style: TextStyle(fontSize: 14.0,color:titleColor,fontWeight:FontWeight.w500)),
               TextSpan(
                 text: "  ($count)",
                 style: TextStyle(fontSize: 12.0, color: Colors.grey),

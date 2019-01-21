@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
               child: IconButton(
                 icon: Icon(Icons.polymer),
                 onPressed: () {
-                  Navigator.pushNamed(context, "Friends");
+                  Navigator.pushNamed(context, "First");
                 },
               ),
             ),

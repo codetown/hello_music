@@ -23,6 +23,7 @@ class Cloud extends StatefulWidget {
 class _CloudState extends State<Cloud> {
   @override
   Widget build(BuildContext context) {
+    //double cxtWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -72,9 +73,20 @@ class _CloudState extends State<Cloud> {
           children: <Widget>[
             //资料卡片区域
             Container(
-              decoration: BoxDecoration(color: Colors.red),
-              padding: EdgeInsets.only(left: 4.0, bottom: 4.0, right: 4.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                //image:DecorationImage(image:Image.network(src)) ,
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment(1, 0.5), 
+                  colors: [Colors.red, Colors.white], // whitish to gray
+                  tileMode:TileMode.clamp,
+                ),
+              ),
+              padding: EdgeInsets.only(left: 4.0, right: 4.0),
               child: Card(
+                color: Colors.white,
+                elevation:4.0,
                 child: Padding(
                   padding: const EdgeInsets.only(
                     top: 8.0,
@@ -143,7 +155,7 @@ class _CloudState extends State<Cloud> {
                         height: 8.0,
                       ),
                       Container(
-                        height: 20.0,
+                        height: 22.0,
                         child: RawMaterialButton(
                           onPressed: () {},
                           padding: EdgeInsets.all(0.0),
@@ -153,6 +165,7 @@ class _CloudState extends State<Cloud> {
                                 child: Text(
                                   "黑胶VIP首开低至9元",
                                   style: TextStyle(
+                                    fontSize:12.0,
                                     color: Colors.grey,
                                     fontWeight: FontWeight.normal,
                                   ),
@@ -161,6 +174,7 @@ class _CloudState extends State<Cloud> {
                               Text(
                                 "查看 >",
                                 style: TextStyle(
+                                  fontSize:12.0,
                                   color: Colors.grey,
                                   fontWeight: FontWeight.normal,
                                 ),
@@ -174,10 +188,6 @@ class _CloudState extends State<Cloud> {
                 ),
               ),
             ),
-            Divider(
-              height: 1.0,
-              indent: 50.0,
-            ),
             RawMaterialButton(
               child: MenuItem(
                 iconData: Icons.folder_open,
@@ -187,10 +197,7 @@ class _CloudState extends State<Cloud> {
               ),
               onPressed: () {},
             ),
-            Divider(
-              height: 1.0,
-              indent: 50.0,
-            ),
+            Divider(height: 1.0, indent: 50.0, color: Colors.grey[100]),
             RawMaterialButton(
               child: MenuItem(
                 iconData: Icons.file_download,
@@ -200,10 +207,7 @@ class _CloudState extends State<Cloud> {
               ),
               onPressed: () {},
             ),
-            Divider(
-              height: 1.0,
-              indent: 50.0,
-            ),
+            Divider(height: 1.0, indent: 50.0, color: Colors.grey[100]),
             RawMaterialButton(
               child: MenuItem(
                 iconData: Icons.tv,
@@ -213,10 +217,7 @@ class _CloudState extends State<Cloud> {
               ),
               onPressed: () {},
             ),
-            Divider(
-              height: 1.0,
-              indent: 50.0,
-            ),
+            Divider(height: 1.0, indent: 50.0, color: Colors.grey[100]),
             RawMaterialButton(
               child: MenuItem(
                 iconData: Icons.timer,
@@ -226,105 +227,101 @@ class _CloudState extends State<Cloud> {
               ),
               onPressed: () {},
             ),
-            Divider(height: 1.0),
-            ExpansionTile(
-              initiallyExpanded: true,
-              title: Text("我的歌单"),
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.only(
-                      left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
-                  child: MusicItem(
-                    imgUrl:
-                        "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/9358d109b3de9c8263c93f496e81800a18d8434c.jpg",
-                    title: "我最喜欢的音乐",
-                    subtitle: "97首",
-                  ),
-                ),
-                Divider(
-                  height: 1.0,
-                  indent: 64.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(
-                      left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
-                  child: MusicItem(
-                    imgUrl:
-                        "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/9358d109b3de9c8263c93f496e81800a18d8434c.jpg",
-                    title: "最平凡的伤感",
-                    subtitle: "66首",
-                  ),
-                ),
-                Divider(
-                  height: 1.0,
-                  indent: 64.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(
-                      left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
-                  child: MusicItem(
-                    imgUrl:
-                        "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/9358d109b3de9c8263c93f496e81800a18d8434c.jpg",
-                    title: "周杰伦",
-                    subtitle: "103首",
-                  ),
-                ),
-                Divider(
-                  height: 1.0,
-                  indent: 64.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(
-                      left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
-                  child: MusicItem(
-                    imgUrl:
-                        "https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/9358d109b3de9c8263c93f496e81800a18d8434c.jpg",
-                    title: "林俊杰",
-                    subtitle: "112首",
-                  ),
-                ),
-              ],
+            Divider(
+              height: 1.0,
+              color: Colors.grey[200],
             ),
-            /*Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                SizedBox(
-                    width: 30.0,
-                    height: 30.0,
-                    child: RawMaterialButton(
-                      elevation: 0.0,
-                      highlightElevation: 0.0,
-                      child: Icon(
-                        Icons.arrow_drop_down,
-                        color: Colors.grey,
-                      ),
-                      onPressed: () {},
-                    )),
-                Expanded(
-                  child: Text("我的歌单", style: TextStyle(fontSize: 12.0)),
-                ),
-                SizedBox(
-                  width: 30.0,
-                  height: 30.0,
-                  child: RawMaterialButton(
-                    elevation: 0,
-                    highlightElevation: 0,
+            Container(
+              decoration: BoxDecoration(color: Colors.grey[50]),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  SizedBox(
+                    width: 32.0,
+                    height: 32.0,
                     child: Icon(
-                      Icons.settings,
-                      color: Colors.grey[300],
+                      Icons.list,
+                      color: Colors.grey,
                       size: 20.0,
                     ),
-                    onPressed: () {},
                   ),
-                ),
-                SizedBox(
-                  width: 10.0,
-                  height: 30.0,
-                ),
-              ],
+                  Expanded(
+                    child: Text("我的歌单", style: TextStyle(fontSize: 12.0)),
+                  ),
+                  SizedBox(
+                    width: 32.0,
+                    height: 32.0,
+                    child: RawMaterialButton(
+                      elevation: 0,
+                      highlightElevation: 0,
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.grey,
+                        size: 20.0,
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Divider(height: 1.0),*/
+            Container(
+              padding: EdgeInsets.only(
+                left: 8.0,
+                right: 8.0,
+                top: 4.0,
+                bottom: 4.0,
+              ),
+              child: MusicItem(
+                imgUrl:"http://192.168.31.208/img/zhk.jpg",
+                title: "我喜欢的音乐",
+                subtitle: "25首",
+              ),
+            ),
+            Divider(height: 1.0, indent: 64.0, color: Colors.grey[100]),
+            Container(
+              padding:
+                  EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
+              child: MusicItem(
+                imgUrl:
+                    "http://192.168.31.208/img/zcx.jpg",
+                title: "最平凡的伤感",
+                subtitle: "66首",
+              ),
+            ),
+            Divider(height: 1.0, indent: 64.0, color: Colors.grey[100]),
+            Container(
+              padding:
+                  EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
+              child: MusicItem(
+                imgUrl:"http://192.168.31.208/img/rxq.jpg",
+                title: "最简单的快乐",
+                subtitle: "66首",
+              ),
+            ),
+            Divider(height: 1.0, indent: 64.0, color: Colors.grey[100]),
+            Container(
+              padding:
+                  EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
+              child: MusicItem(
+                imgUrl:
+                    "http://192.168.31.208/img/zjl.jpg",
+                title: "周杰伦",
+                subtitle: "103首",
+              ),
+            ),
+            Divider(height: 1.0, indent: 64.0, color: Colors.grey[100]),
+            Container(
+              padding:
+                  EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
+              child: MusicItem(
+                imgUrl:
+                    "http://192.168.31.208/img/ljj.jpg",
+                title: "林俊杰",
+                subtitle: "112首",
+              ),
+            ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
