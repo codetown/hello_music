@@ -3,7 +3,6 @@ import 'package:hello_music/items/menu_item.dart';
 class MenuList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Card(
               child: Column(
                 children: <Widget>[

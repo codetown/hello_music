@@ -4,7 +4,6 @@ import 'package:hello_music/items/music_item.dart';
 class MusicAlbum extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Card(
       child: Column(
         children: <Widget>[

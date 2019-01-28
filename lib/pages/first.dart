@@ -33,6 +33,7 @@ class _FirstState extends State<First> {
       {"image": "guanggao5.jpg"},
     ];
     double cxtWidth = MediaQuery.of(context).size.width;
+    double almWidth = (cxtWidth - 24.00) / 3.00;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -96,26 +97,27 @@ class _FirstState extends State<First> {
                 ),
               ),
               padding: EdgeInsets.only(left: 6.0, right: 6.0),
-              child: Swiper(
-                itemBuilder: (BuildContext context, int index) {
-                  return ClipRRect(
-                    child: Image.network(
-                        "http://192.168.31.208/img/" +
-                            _sliderList[index]["image"],
-                        width: cxtWidth - 12.0,
-                        height: cxtWidth * 0.382,
-                        fit: BoxFit.fill),
-                    borderRadius: BorderRadius.circular(5.0),
-                  );
-                },
-                itemCount: _sliderList.length,
-                pagination: SwiperPagination(
-                  margin: EdgeInsets.only(bottom: 6.0),
-                  builder: DotSwiperPaginationBuilder(
-                    size: 6.0,
-                    activeSize: 6.0,
-                    color: Color(0x99ffffff),
-                    activeColor: Colors.red,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(5.0),
+                child: Swiper(
+                  itemBuilder: (BuildContext context, int index) {
+                    return Image.network(
+                      "http://192.168.31.208/img/music/" +
+                          _sliderList[index]["image"],
+                      width: cxtWidth - 12.0,
+                      height: cxtWidth * 0.382,
+                      fit: BoxFit.fill,
+                    );
+                  },
+                  itemCount: _sliderList.length,
+                  pagination: SwiperPagination(
+                    margin: EdgeInsets.only(bottom: 6.0),
+                    builder: DotSwiperPaginationBuilder(
+                      size: 6.0,
+                      activeSize: 6.0,
+                      color: Color(0x99ffffff),
+                      activeColor: Colors.red,
+                    ),
                   ),
                 ),
               ),
@@ -201,7 +203,7 @@ class _FirstState extends State<First> {
               alignment: Alignment.centerLeft,
               width: cxtWidth,
               //height: 32.0,
-              padding: EdgeInsets.only(left: 6.0,bottom:12.0),
+              padding: EdgeInsets.only(left: 6.0, bottom: 12.0),
               child: Text.rich(
                 TextSpan(
                   text: "推荐歌单   ",
@@ -215,47 +217,53 @@ class _FirstState extends State<First> {
                 ),
               ),
             ),
-            Wrap(
-              spacing:4.0,
-              //runSpacing:4.0,
-              children: <Widget>[
-                MusicBill(
-                    width:(cxtWidth-20)/3,
-                    imgUrl:"http://192.168.31.208/img/zjl.jpg",
-                    title:"窗外的麻雀在电线杆上多嘴你说这一句很有夏天的柑橘",
-                    visits:550,
-                ),
-                MusicBill(
-                    width:(cxtWidth-20)/3,
-                    imgUrl:"http://192.168.31.208/img/ljj.jpg",
-                    title:"确认过眼神你遇上对的人我挥剑转身而坚决如红尘",
-                    visits:346,
-                ),
-                MusicBill(
-                    width:(cxtWidth-20)/3,
-                    imgUrl:"http://192.168.31.208/img/zcx.jpg",
-                    title:"依然记得从你眼中滑落的泪坚决如铁灰暗中种烈日灼身的错觉",
-                    visits:550,
-                ),
-                MusicBill(
-                    width:(cxtWidth-20)/3,
-                    imgUrl:"http://192.168.31.208/img/rxq.jpg",
-                    title:"窗外的麻雀在电线杆上多嘴你说这一句很有夏天的感觉",
-                    visits:550,
-                ),
-                MusicBill(
-                    width:(cxtWidth-20)/3,
-                    imgUrl:"http://192.168.31.208/img/zhk.jpg",
-                    title:"就是你最爱的歌曲怎么舍得我难过的夜晚怎么不可能",
-                    visits:550,
-                ),
-                MusicBill(
-                    width:(cxtWidth-20)/3,
-                    imgUrl:"http://192.168.31.208/img/bestseller.jpg",
-                    title:"这是谁的歌单这么奇葩呀666的设计费可视对讲阿卡十大",
-                    visits:550,
-                ),
-              ],
+
+            //歌单列表
+            Container(
+              width: cxtWidth,
+              padding: EdgeInsets.only(left: 6.0, right: 6.0),
+              decoration: BoxDecoration(color: Colors.white),
+              child: Wrap(
+                spacing: 6.0,
+                children: <Widget>[
+                  MusicBill(
+                    width: almWidth,
+                    imgUrl: "http://192.168.31.208/img/music/zjl.jpg",
+                    title: "窗外的麻雀在电线杆上多嘴，你说这一句很有夏天的感觉",
+                    visits: 550,
+                  ),
+                  MusicBill(
+                    width: almWidth,
+                    imgUrl: "http://192.168.31.208/img/music/ljj.jpg",
+                    title: "确认过眼神你遇上对的人，我挥剑转身而坚决如红尘",
+                    visits: 346,
+                  ),
+                  MusicBill(
+                    width: almWidth,
+                    imgUrl: "http://192.168.31.208/img/music/zcx.jpg",
+                    title: "依然记得从你眼中滑落的泪坚决如铁，灰暗中种烈日灼身的错觉",
+                    visits: 550,
+                  ),
+                  MusicBill(
+                    width: almWidth,
+                    imgUrl: "http://192.168.31.208/img/music/rxq.jpg",
+                    title: "窗外的麻雀在电线杆上多嘴,你说这一句很有夏天的感觉",
+                    visits: 550,
+                  ),
+                  MusicBill(
+                    width: almWidth,
+                    imgUrl: "http://192.168.31.208/img/music/zhk.jpg",
+                    title: "就是你最爱的歌曲怎么舍得我难过的夜晚怎么不可能",
+                    visits: 550,
+                  ),
+                  MusicBill(
+                    width: (almWidth).floorToDouble(),
+                    imgUrl: "http://192.168.31.208/img/music/wyt.jpg",
+                    title: "我的世界里曾经有你，不需要任何感激",
+                    visits: 550,
+                  ),
+                ],
+              ),
             )
           ],
         ),

@@ -86,7 +86,7 @@ class _CloudState extends State<Cloud> {
               padding: EdgeInsets.only(left: 4.0, right: 4.0),
               child: Card(
                 color: Colors.white,
-                elevation:4.0,
+                elevation:3.0,
                 child: Padding(
                   padding: const EdgeInsets.only(
                     top: 8.0,
@@ -274,7 +274,7 @@ class _CloudState extends State<Cloud> {
                 bottom: 4.0,
               ),
               child: MusicItem(
-                imgUrl:"http://192.168.31.208/img/zhk.jpg",
+                imgUrl:"http://192.168.31.208/img/music/zhk.jpg",
                 title: "我喜欢的音乐",
                 subtitle: "25首",
               ),
@@ -285,9 +285,9 @@ class _CloudState extends State<Cloud> {
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
                 imgUrl:
-                    "http://192.168.31.208/img/zcx.jpg",
+                    "http://192.168.31.208/img/music/zcx.jpg",
                 title: "最平凡的伤感",
-                subtitle: "66首",
+                subtitle: "50首",
               ),
             ),
             Divider(height: 1.0, indent: 64.0, color: Colors.grey[100]),
@@ -295,7 +295,7 @@ class _CloudState extends State<Cloud> {
               padding:
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
-                imgUrl:"http://192.168.31.208/img/rxq.jpg",
+                imgUrl:"http://192.168.31.208/img/music/rxq.jpg",
                 title: "最简单的快乐",
                 subtitle: "66首",
               ),
@@ -306,7 +306,7 @@ class _CloudState extends State<Cloud> {
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
                 imgUrl:
-                    "http://192.168.31.208/img/zjl.jpg",
+                    "http://192.168.31.208/img/music/zjl.jpg",
                 title: "周杰伦",
                 subtitle: "103首",
               ),
@@ -317,7 +317,7 @@ class _CloudState extends State<Cloud> {
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
                 imgUrl:
-                    "http://192.168.31.208/img/ljj.jpg",
+                    "http://192.168.31.208/img/music/ljj.jpg",
                 title: "林俊杰",
                 subtitle: "112首",
               ),

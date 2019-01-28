@@ -4,8 +4,8 @@ class NameCard extends StatelessWidget {
   const NameCard({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Card(
+      elevation:0,
       child: Padding(
         padding: const EdgeInsets.only(
           top: 8.0,
