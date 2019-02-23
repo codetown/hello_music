@@ -1,1 +1,2 @@
-# hello_music
+Hello Music 是一套使用Flutter技术开发的仿网易云音乐的app UI
+目前正在不定期的开发和更新中
