@@ -25,12 +25,12 @@ class _FirstState extends State<First> {
   @override
   Widget build(BuildContext context) {
     _sliderList = [
-      {"image": "guanggao0.jpg"},
-      {"image": "guanggao1.jpg"},
-      {"image": "guanggao2.jpg"},
-      {"image": "guanggao3.jpg"},
-      {"image": "guanggao4.jpg"},
-      {"image": "guanggao5.jpg"},
+      {"image": "g1.jpg"},
+      {"image": "g2.jpg"},
+      {"image": "g3.jpg"},
+      {"image": "g4.jpg"},
+      {"image": "g5.jpg"},
+      {"image": "g6.jpg"},
     ];
     double cxtWidth = MediaQuery.of(context).size.width;
     double almWidth = (cxtWidth - 24.00) / 3.00;
@@ -102,7 +102,7 @@ class _FirstState extends State<First> {
                 child: Swiper(
                   itemBuilder: (BuildContext context, int index) {
                     return Image.network(
-                      "http://192.168.31.208/img/music/" +
+                      "https://gitee.com/codetown/codedata/raw/master/flmall/images/" +
                           _sliderList[index]["image"],
                       width: cxtWidth - 12.0,
                       height: cxtWidth * 0.382,

@@ -41,7 +41,7 @@ class _FriendsState extends State<Friends> {
           return RawMaterialButton(
             padding:EdgeInsets.all(8.0),
             child: FriendItem(
-              imgUrl: "http://192.168.31.208/upload/timg.jpg",
+              imgUrl: "https://gitee.com/codetown/codedata/blob/master/cmovie/images/avatar.png",
               title: _friendList[index]['title'],
               subtitle: _friendList[index]['subtitle'],
             ),
