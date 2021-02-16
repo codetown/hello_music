@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:hello_music/utils.dart';
 class NameCard extends StatelessWidget {
   const NameCard({Key key}) : super(key: key);
   @override
@@ -20,7 +20,7 @@ class NameCard extends StatelessWidget {
               child: Row(children: <Widget>[
                 ClipOval(
                   child: Image.network(
-                    "http://192.168.31.208/upload/timg.jpg",
+                    "${Utils.baseUrl}/flmall/timg.jpg",
                     height: 50.0,
                     width: 50.0,
                   ),

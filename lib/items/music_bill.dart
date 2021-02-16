@@ -39,7 +39,7 @@ class MusicBill extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.only(top: 6.0,bottom:6.0),
+              padding: EdgeInsets.only(top: 8.0,bottom:8.0),
               width:width,
               height:50.0,
               child: Text(

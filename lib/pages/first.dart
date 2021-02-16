@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_music/items/music_bill.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-
+import 'package:hello_music/utils.dart';
 class First extends StatefulWidget {
   First({
     Key key,
@@ -25,15 +25,15 @@ class _FirstState extends State<First> {
   @override
   Widget build(BuildContext context) {
     _sliderList = [
-      {"image": "g1.jpg"},
-      {"image": "g2.jpg"},
-      {"image": "g3.jpg"},
-      {"image": "g4.jpg"},
-      {"image": "g5.jpg"},
-      {"image": "g6.jpg"},
+      {"image": "guanggao0.jpg"},
+      {"image": "guanggao1.jpg"},
+      {"image": "guanggao2.jpg"},
+      {"image": "guanggao3.jpg"},
+      {"image": "guanggao4.jpg"},
+      {"image": "guanggao5.jpg"},
     ];
     double cxtWidth = MediaQuery.of(context).size.width;
-    double almWidth = (cxtWidth - 24.00) / 3.00;
+    double almWidth = (cxtWidth - 64.00) / 3.00;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -46,7 +46,9 @@ class _FirstState extends State<First> {
             Expanded(
               child: IconButton(
                 icon: Icon(Icons.library_music),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "Cloud");
+                },
               ),
             ),
             Expanded(
@@ -61,7 +63,7 @@ class _FirstState extends State<First> {
               child: IconButton(
                 icon: Icon(Icons.play_circle_outline),
                 onPressed: () {
-                  Navigator.pushNamed(context, "Friends");
+                  Navigator.pushNamed(context, "First");
                 },
               ),
             ),
@@ -96,25 +98,25 @@ class _FirstState extends State<First> {
                   tileMode: TileMode.clamp,
                 ),
               ),
-              padding: EdgeInsets.only(left: 6.0, right: 6.0),
+              padding: EdgeInsets.only(left: 16.0, right:16.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(5.0),
                 child: Swiper(
                   itemBuilder: (BuildContext context, int index) {
                     return Image.network(
-                      "https://gitee.com/codetown/codedata/raw/master/flmall/images/" +
+                      "${Utils.baseUrl}/music/" +
                           _sliderList[index]["image"],
-                      width: cxtWidth - 12.0,
+                      width: cxtWidth - 16.0,
                       height: cxtWidth * 0.382,
                       fit: BoxFit.fill,
                     );
                   },
                   itemCount: _sliderList.length,
                   pagination: SwiperPagination(
-                    margin: EdgeInsets.only(bottom: 6.0),
+                    margin: EdgeInsets.only(bottom: 16.0),
                     builder: DotSwiperPaginationBuilder(
-                      size: 6.0,
-                      activeSize: 6.0,
+                      size: 16.0,
+                      activeSize: 16.0,
                       color: Color(0x99ffffff),
                       activeColor: Colors.red,
                     ),
@@ -137,7 +139,7 @@ class _FirstState extends State<First> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0, height: 6.0),
+                      SizedBox(width: 10.0, height: 16.0),
                       Text("私人FM")
                     ],
                   ),
@@ -155,7 +157,7 @@ class _FirstState extends State<First> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0, height: 6.0),
+                      SizedBox(width: 10.0, height: 16.0),
                       Text("每日推荐")
                     ],
                   ),
@@ -173,7 +175,7 @@ class _FirstState extends State<First> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0, height: 6.0),
+                      SizedBox(width: 10.0, height: 16.0),
                       Text("歌单")
                     ],
                   ),
@@ -191,7 +193,7 @@ class _FirstState extends State<First> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0, height: 6.0),
+                      SizedBox(width: 10.0, height: 16.0),
                       Text("排行榜")
                     ],
                   ),
@@ -203,7 +205,7 @@ class _FirstState extends State<First> {
               alignment: Alignment.centerLeft,
               width: cxtWidth,
               //height: 32.0,
-              padding: EdgeInsets.only(left: 6.0, bottom: 12.0),
+              padding: EdgeInsets.only(left: 16.0, bottom: 8.0),
               child: Text.rich(
                 TextSpan(
                   text: "推荐歌单   ",
@@ -221,44 +223,44 @@ class _FirstState extends State<First> {
             //歌单列表
             Container(
               width: cxtWidth,
-              padding: EdgeInsets.only(left: 6.0, right: 6.0),
+              padding: EdgeInsets.only(left: 16.0, right: 16.0),
               decoration: BoxDecoration(color: Colors.white),
               child: Wrap(
-                spacing: 6.0,
+                spacing: 16.0,
                 children: <Widget>[
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "http://192.168.31.208/img/music/zjl.jpg",
+                    imgUrl: "${Utils.baseUrl}/music/zjl.jpg",
                     title: "窗外的麻雀在电线杆上多嘴，你说这一句很有夏天的感觉",
                     visits: 550,
                   ),
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "http://192.168.31.208/img/music/ljj.jpg",
+                    imgUrl: "${Utils.baseUrl}/music/ljj.jpg",
                     title: "确认过眼神你遇上对的人，我挥剑转身而坚决如红尘",
                     visits: 346,
                   ),
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "http://192.168.31.208/img/music/zcx.jpg",
+                    imgUrl: "${Utils.baseUrl}/music/zcx.jpg",
                     title: "依然记得从你眼中滑落的泪坚决如铁，灰暗中种烈日灼身的错觉",
                     visits: 550,
                   ),
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "http://192.168.31.208/img/music/rxq.jpg",
+                    imgUrl: "${Utils.baseUrl}/music/rxq.jpg",
                     title: "窗外的麻雀在电线杆上多嘴,你说这一句很有夏天的感觉",
                     visits: 550,
                   ),
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "http://192.168.31.208/img/music/zhk.jpg",
+                    imgUrl: "${Utils.baseUrl}/music/zhk.jpg",
                     title: "就是你最爱的歌曲怎么舍得我难过的夜晚怎么不可能",
                     visits: 550,
                   ),
                   MusicBill(
                     width: (almWidth).floorToDouble(),
-                    imgUrl: "http://192.168.31.208/img/music/wyt.jpg",
+                    imgUrl: "${Utils.baseUrl}/music/wyt.jpg",
                     title: "我的世界里曾经有你，不需要任何感激",
                     visits: 550,
                   ),

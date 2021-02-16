@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_music/items/menu_item.dart';
 import 'package:hello_music/items/music_item.dart';
-
+import 'package:hello_music/utils.dart';
 class Cloud extends StatefulWidget {
   Cloud({
     Key key,
@@ -36,7 +36,9 @@ class _CloudState extends State<Cloud> {
             Expanded(
               child: IconButton(
                 icon: Icon(Icons.library_music),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "Cloud");
+                },
               ),
             ),
             Expanded(
@@ -51,7 +53,7 @@ class _CloudState extends State<Cloud> {
               child: IconButton(
                 icon: Icon(Icons.play_circle_outline),
                 onPressed: () {
-                  Navigator.pushNamed(context, "Friends");
+                  Navigator.pushNamed(context, "First");
                 },
               ),
             ),
@@ -101,7 +103,7 @@ class _CloudState extends State<Cloud> {
                         child: Row(children: <Widget>[
                           ClipOval(
                             child: Image.network(
-                              "http://192.168.31.208/upload/timg.jpg",
+                              "${Utils.baseUrl}/flmall/timg.jpg",
                               height: 50.0,
                               width: 50.0,
                             ),
@@ -274,7 +276,7 @@ class _CloudState extends State<Cloud> {
                 bottom: 4.0,
               ),
               child: MusicItem(
-                imgUrl:"http://192.168.31.208/img/music/zhk.jpg",
+                imgUrl:"${Utils.baseUrl}/music/zhk.jpg",
                 title: "我喜欢的音乐",
                 subtitle: "25首",
               ),
@@ -285,7 +287,7 @@ class _CloudState extends State<Cloud> {
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
                 imgUrl:
-                    "http://192.168.31.208/img/music/zcx.jpg",
+                    "${Utils.baseUrl}/music/zcx.jpg",
                 title: "最平凡的伤感",
                 subtitle: "50首",
               ),
@@ -295,7 +297,7 @@ class _CloudState extends State<Cloud> {
               padding:
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
-                imgUrl:"http://192.168.31.208/img/music/rxq.jpg",
+                imgUrl:"${Utils.baseUrl}/music/rxq.jpg",
                 title: "最简单的快乐",
                 subtitle: "66首",
               ),
@@ -306,7 +308,7 @@ class _CloudState extends State<Cloud> {
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
                 imgUrl:
-                    "http://192.168.31.208/img/music/zjl.jpg",
+                    "${Utils.baseUrl}/music/zjl.jpg",
                 title: "周杰伦",
                 subtitle: "103首",
               ),
@@ -317,7 +319,7 @@ class _CloudState extends State<Cloud> {
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
                 imgUrl:
-                    "http://192.168.31.208/img/music/ljj.jpg",
+                    "${Utils.baseUrl}/music/ljj.jpg",
                 title: "林俊杰",
                 subtitle: "112首",
               ),

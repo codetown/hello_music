@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
               child: IconButton(
                 icon: Icon(Icons.polymer),
                 onPressed: () {
-                  Navigator.pushNamed(context, "First");
+                  Navigator.pushNamed(context, "Friends");
                 },
               ),
             ),
@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
                 child: IconButton(
                 icon: Icon(Icons.play_circle_outline),
                 onPressed: () {
-                  Navigator.pushNamed(context, "Friends");
+                  Navigator.pushNamed(context, "First");
                 },
             ))
           ],

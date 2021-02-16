@@ -5,8 +5,8 @@ class MenuItem extends StatelessWidget {
       {Key key,
       this.iconData,
       this.iconColor = Colors.grey,
-      this.title,
-      this.count=0,
+      this.title = '',
+      this.count = 0,
       this.titleColor = const Color(0xff555555)});
   final IconData iconData;
   final Color iconColor;
@@ -31,7 +31,12 @@ class MenuItem extends StatelessWidget {
         Expanded(
           child: Text.rich(
             TextSpan(children: <TextSpan>[
-              TextSpan(text: title,style: TextStyle(fontSize: 14.0,color:titleColor,fontWeight:FontWeight.w500)),
+              TextSpan(
+                  text: title,
+                  style: TextStyle(
+                      fontSize: 14.0,
+                      color: titleColor,
+                      fontWeight: FontWeight.w500)),
               TextSpan(
                 text: "  ($count)",
                 style: TextStyle(fontSize: 12.0, color: Colors.grey),
