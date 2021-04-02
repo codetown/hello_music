@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_music/items/menu_item.dart';
 import 'package:hello_music/items/music_item.dart';
 import 'package:hello_music/utils.dart';
+
 class Cloud extends StatefulWidget {
   Cloud({
     Key key,
@@ -80,15 +81,15 @@ class _CloudState extends State<Cloud> {
                 //image:DecorationImage(image:Image.network(src)) ,
                 gradient: LinearGradient(
                   begin: Alignment.topRight,
-                  end: Alignment(1, 0.5), 
+                  end: Alignment(1, 0.5),
                   colors: [Colors.red, Colors.white], // whitish to gray
-                  tileMode:TileMode.clamp,
+                  tileMode: TileMode.clamp,
                 ),
               ),
               padding: EdgeInsets.only(left: 4.0, right: 4.0),
               child: Card(
                 color: Colors.white,
-                elevation:3.0,
+                elevation: 3.0,
                 child: Padding(
                   padding: const EdgeInsets.only(
                     top: 8.0,
@@ -134,12 +135,7 @@ class _CloudState extends State<Cloud> {
                           SizedBox(
                             height: 24.0,
                             width: 72.0,
-                            child: OutlineButton(
-                              padding: EdgeInsets.zero,
-                              color: Colors.white,
-                              splashColor: Colors.white,
-                              borderSide:
-                                  BorderSide(width: 1.0, color: Colors.red),
+                            child: OutlinedButton(
                               child: Text(
                                 "开通会员",
                                 style: TextStyle(
@@ -167,7 +163,7 @@ class _CloudState extends State<Cloud> {
                                 child: Text(
                                   "黑胶VIP首开低至9元",
                                   style: TextStyle(
-                                    fontSize:12.0,
+                                    fontSize: 12.0,
                                     color: Colors.grey,
                                     fontWeight: FontWeight.normal,
                                   ),
@@ -176,7 +172,7 @@ class _CloudState extends State<Cloud> {
                               Text(
                                 "查看 >",
                                 style: TextStyle(
-                                  fontSize:12.0,
+                                  fontSize: 12.0,
                                   color: Colors.grey,
                                   fontWeight: FontWeight.normal,
                                 ),
@@ -276,7 +272,7 @@ class _CloudState extends State<Cloud> {
                 bottom: 4.0,
               ),
               child: MusicItem(
-                imgUrl:"${Utils.baseUrl}/music/zhk.jpg",
+                imgUrl: "${Utils.baseUrl}/music/zhk.jpg",
                 title: "我喜欢的音乐",
                 subtitle: "25首",
               ),
@@ -286,8 +282,7 @@ class _CloudState extends State<Cloud> {
               padding:
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
-                imgUrl:
-                    "${Utils.baseUrl}/music/zcx.jpg",
+                imgUrl: "${Utils.baseUrl}/music/zcx.jpg",
                 title: "最平凡的伤感",
                 subtitle: "50首",
               ),
@@ -297,7 +292,7 @@ class _CloudState extends State<Cloud> {
               padding:
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
-                imgUrl:"${Utils.baseUrl}/music/rxq.jpg",
+                imgUrl: "${Utils.baseUrl}/music/rxq.jpg",
                 title: "最简单的快乐",
                 subtitle: "66首",
               ),
@@ -307,8 +302,7 @@ class _CloudState extends State<Cloud> {
               padding:
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
-                imgUrl:
-                    "${Utils.baseUrl}/music/zjl.jpg",
+                imgUrl: "${Utils.baseUrl}/music/zjl.jpg",
                 title: "周杰伦",
                 subtitle: "103首",
               ),
@@ -318,8 +312,7 @@ class _CloudState extends State<Cloud> {
               padding:
                   EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: MusicItem(
-                imgUrl:
-                    "${Utils.baseUrl}/music/ljj.jpg",
+                imgUrl: "${Utils.baseUrl}/music/ljj.jpg",
                 title: "林俊杰",
                 subtitle: "112首",
               ),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hello_music/utils.dart';
+
 class NameCard extends StatelessWidget {
   const NameCard({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation:0,
+      elevation: 0,
       child: Padding(
         padding: const EdgeInsets.only(
           top: 8.0,
@@ -51,11 +52,7 @@ class NameCard extends StatelessWidget {
                 SizedBox(
                   height: 24.0,
                   width: 72.0,
-                  child: OutlineButton(
-                    padding: EdgeInsets.zero,
-                    color: Colors.white,
-                    splashColor: Colors.white,
-                    borderSide: BorderSide(width: 1.0, color: Colors.red),
+                  child: OutlinedButton(
                     child: Text(
                       "开通会员",
                       style: TextStyle(
