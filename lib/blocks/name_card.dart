@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hello_music/utils.dart';
 
 class NameCard extends StatelessWidget {
-  const NameCard({Key key}) : super(key: key);
+  const NameCard({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Card(

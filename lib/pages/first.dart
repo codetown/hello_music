@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hello_music/items/music_bill.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:hello_music/utils.dart';
+
 class First extends StatefulWidget {
-  First({
-    Key key,
-  }) : super(key: key);
+  const First({Key? key}) : super(key: key);
 
   // This widget is the First page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -38,14 +37,14 @@ class _FirstState extends State<First> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           onPressed: () {},
         ),
         title: Row(
           children: <Widget>[
             Expanded(
               child: IconButton(
-                icon: Icon(Icons.library_music),
+                icon: const Icon(Icons.library_music),
                 onPressed: () {
                   Navigator.pushNamed(context, "Cloud");
                 },
@@ -53,7 +52,7 @@ class _FirstState extends State<First> {
             ),
             Expanded(
               child: IconButton(
-                icon: Icon(Icons.polymer),
+                icon: const Icon(Icons.polymer),
                 onPressed: () {
                   Navigator.pushNamed(context, "Friends");
                 },
@@ -61,7 +60,7 @@ class _FirstState extends State<First> {
             ),
             Expanded(
               child: IconButton(
-                icon: Icon(Icons.play_circle_outline),
+                icon: const Icon(Icons.play_circle_outline),
                 onPressed: () {
                   Navigator.pushNamed(context, "First");
                 },
@@ -71,7 +70,7 @@ class _FirstState extends State<First> {
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.pool),
+            icon: const Icon(Icons.pool),
             onPressed: () {},
           )
         ],
@@ -85,10 +84,10 @@ class _FirstState extends State<First> {
           children: <Widget>[
             //资料卡片区域
             Container(
-              margin: EdgeInsets.only(bottom: 12.0),
+              margin: const EdgeInsets.only(bottom: 12.0),
               width: cxtWidth,
               height: cxtWidth * 0.382,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 //image:DecorationImage(image:Image.network(src)) ,
                 gradient: LinearGradient(
@@ -98,31 +97,30 @@ class _FirstState extends State<First> {
                   tileMode: TileMode.clamp,
                 ),
               ),
-              padding: EdgeInsets.only(left: 16.0, right:16.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(5.0),
-                child: Swiper(
-                  itemBuilder: (BuildContext context, int index) {
-                    return Image.network(
-                      "${Utils.baseUrl}/music/" +
-                          _sliderList[index]["image"],
-                      width: cxtWidth - 16.0,
-                      height: cxtWidth * 0.382,
-                      fit: BoxFit.fill,
-                    );
-                  },
-                  itemCount: _sliderList.length,
-                  pagination: SwiperPagination(
-                    margin: EdgeInsets.only(bottom: 16.0),
-                    builder: DotSwiperPaginationBuilder(
-                      size: 16.0,
-                      activeSize: 16.0,
-                      color: Color(0x99ffffff),
-                      activeColor: Colors.red,
-                    ),
-                  ),
-                ),
-              ),
+              padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+              // child: ClipRRect(
+              //   borderRadius: BorderRadius.circular(5.0),
+              //   child: Swiper(
+              //     itemBuilder: (BuildContext context, int index) {
+              //       return Image.network(
+              //         "${Utils.baseUrl}/music/" + _sliderList[index]["image"],
+              //         width: cxtWidth - 16.0,
+              //         height: cxtWidth * 0.382,
+              //         fit: BoxFit.fill,
+              //       );
+              //     },
+              //     itemCount: _sliderList.length,
+              //     pagination: const SwiperPagination(
+              //       margin: EdgeInsets.only(bottom: 16.0),
+              //       builder: DotSwiperPaginationBuilder(
+              //         size: 16.0,
+              //         activeSize: 16.0,
+              //         color: Color(0x99ffffff),
+              //         activeColor: Colors.red,
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ),
             Row(
               children: <Widget>[
@@ -133,14 +131,14 @@ class _FirstState extends State<First> {
                         child: Container(
                           color: Colors.red,
                           child: IconButton(
-                            icon: Icon(Icons.live_tv),
+                            icon: const Icon(Icons.live_tv),
                             color: Colors.white,
                             onPressed: () {},
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0, height: 16.0),
-                      Text("私人FM")
+                      const SizedBox(width: 10.0, height: 16.0),
+                      const Text("私人FM")
                     ],
                   ),
                 ),
@@ -151,14 +149,14 @@ class _FirstState extends State<First> {
                         child: Container(
                           color: Colors.red,
                           child: IconButton(
-                            icon: Icon(Icons.perm_contact_calendar),
+                            icon: const Icon(Icons.perm_contact_calendar),
                             color: Colors.white,
                             onPressed: () {},
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0, height: 16.0),
-                      Text("每日推荐")
+                      const SizedBox(width: 10.0, height: 16.0),
+                      const Text("每日推荐")
                     ],
                   ),
                 ),
@@ -169,14 +167,14 @@ class _FirstState extends State<First> {
                         child: Container(
                           color: Colors.red,
                           child: IconButton(
-                            icon: Icon(Icons.satellite),
+                            icon: const Icon(Icons.satellite),
                             color: Colors.white,
                             onPressed: () {},
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0, height: 16.0),
-                      Text("歌单")
+                      const SizedBox(width: 10.0, height: 16.0),
+                      const Text("歌单")
                     ],
                   ),
                 ),
@@ -187,14 +185,14 @@ class _FirstState extends State<First> {
                         child: Container(
                           color: Colors.red,
                           child: IconButton(
-                            icon: Icon(Icons.graphic_eq),
+                            icon: const Icon(Icons.graphic_eq),
                             color: Colors.white,
                             onPressed: () {},
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0, height: 16.0),
-                      Text("排行榜")
+                      const SizedBox(width: 10.0, height: 16.0),
+                      const Text("排行榜")
                     ],
                   ),
                 ),
@@ -205,8 +203,8 @@ class _FirstState extends State<First> {
               alignment: Alignment.centerLeft,
               width: cxtWidth,
               //height: 32.0,
-              padding: EdgeInsets.only(left: 16.0, bottom: 8.0),
-              child: Text.rich(
+              padding: const EdgeInsets.only(left: 16.0, bottom: 8.0),
+              child: const Text.rich(
                 TextSpan(
                   text: "推荐歌单   ",
                   style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
@@ -223,8 +221,8 @@ class _FirstState extends State<First> {
             //歌单列表
             Container(
               width: cxtWidth,
-              padding: EdgeInsets.only(left: 16.0, right: 16.0),
-              decoration: BoxDecoration(color: Colors.white),
+              padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+              decoration: const BoxDecoration(color: Colors.white),
               child: Wrap(
                 spacing: 16.0,
                 children: <Widget>[

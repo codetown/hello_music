@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MusicItem extends StatelessWidget {
-  const MusicItem({Key key, this.imgUrl, this.title, this.subtitle});
+  const MusicItem(
+      {Key? key, this.imgUrl = "", this.title = "", this.subtitle = ""})
+      : super(key: key);
   final String imgUrl;
   final String title;
   final String subtitle;
@@ -24,13 +26,13 @@ class MusicItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(left: 8.0, right: 8.0,top:4.0),
+              padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0),
               height: 24.0,
               child: Text(
                 title,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14.0,
                   fontWeight: FontWeight.w500,
                 ),
@@ -39,7 +41,8 @@ class MusicItem extends StatelessWidget {
             Container(
               height: 24.0,
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 8.0, right:8.0,bottom:6.0),
+              padding:
+                  const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 6.0),
               child: Text(
                 subtitle,
                 maxLines: 1,

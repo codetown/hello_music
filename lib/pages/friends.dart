@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_music/items/friend_item.dart';
 
 class Friends extends StatefulWidget {
-  Friends({
-    Key key,
-  }) : super(key: key);
+  const Friends({Key? key}) : super(key: key);
 
   // This widget is the Friends page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -30,18 +28,26 @@ class _FriendsState extends State<Friends> {
       {'title': '悟净', 'subtitle': '八百里流沙河前世卷帘大将'},
     ];
     return Scaffold(
-      appBar: AppBar(title:Text("好友列表"),elevation:0.0,),
-      backgroundColor:Colors.white,
-      body:ListView.separated(
+      appBar: AppBar(
+        title: const Text("好友列表"),
+        elevation: 0.0,
+      ),
+      backgroundColor: Colors.white,
+      body: ListView.separated(
         itemCount: _friendList.length,
-        separatorBuilder:(BuildContext sContext, int sIndex){
-          return Divider(indent:64.0,height:1.0,color:Colors.grey[200],);
-        } ,
+        separatorBuilder: (BuildContext sContext, int sIndex) {
+          return Divider(
+            indent: 64.0,
+            height: 1.0,
+            color: Colors.grey[200],
+          );
+        },
         itemBuilder: (BuildContext context, int index) {
           return RawMaterialButton(
-            padding:EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: FriendItem(
-              imgUrl: "https://gitee.com/codetown/codedata/raw/master/flmall/timg.jpg",
+              imgUrl:
+                  "https://gitee.com/codetown/codedata/raw/master/flmall/timg.jpg",
               title: _friendList[index]['title'],
               subtitle: _friendList[index]['subtitle'],
             ),

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 class MenuItem extends StatelessWidget {
   const MenuItem(
-      {Key key,
-      this.iconData,
+      {Key? key,
+      required this.iconData,
       this.iconColor = Colors.grey,
       this.title = '',
       this.count = 0,
-      this.titleColor = const Color(0xff555555)});
+      this.titleColor = const Color(0xff555555)})
+      : super(key: key);
   final IconData iconData;
   final Color iconColor;
   final String title;
@@ -39,7 +40,7 @@ class MenuItem extends StatelessWidget {
                       fontWeight: FontWeight.w500)),
               TextSpan(
                 text: "  ($count)",
-                style: TextStyle(fontSize: 12.0, color: Colors.grey),
+                style: const TextStyle(fontSize: 12.0, color: Colors.grey),
               ),
             ]),
           ),

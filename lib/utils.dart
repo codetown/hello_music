@@ -1,4 +1,3 @@
-class Utils{
-  static final baseUrl = "https://gitee.com/codetown/codedata/raw/master/";
+class Utils {
+  static const baseUrl = "https://gitee.com/codetown/codedata/raw/master/";
 }
-

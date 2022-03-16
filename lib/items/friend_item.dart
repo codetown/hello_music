@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FriendItem extends StatelessWidget {
-  const FriendItem({Key key, this.imgUrl, this.title, this.subtitle});
+  const FriendItem(
+      {Key? key, this.imgUrl = "", this.title = "", this.subtitle = ""})
+      : super(key: key);
   final String imgUrl;
   final String title;
   final String subtitle;
@@ -24,13 +26,13 @@ class FriendItem extends StatelessWidget {
           children: <Widget>[
             Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 8.0, right: 8.0),
+              padding: const EdgeInsets.only(left: 8.0, right: 8.0),
               height: 22.0,
               child: Text(
                 title,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16.0,
                   /*color: Colors.red,
                   fontWeight: FontWeight.bold,*/
@@ -40,7 +42,7 @@ class FriendItem extends StatelessWidget {
             Container(
               height: 26.0,
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 8.0, right: 8.0),
+              padding: const EdgeInsets.only(left: 8.0, right: 8.0),
               child: Text(
                 subtitle,
                 maxLines: 1,

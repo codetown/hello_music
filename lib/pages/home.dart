@@ -4,9 +4,11 @@ import 'package:hello_music/blocks/menu_list.dart';
 import 'package:hello_music/blocks/music_album.dart';
 
 class Home extends StatefulWidget {
-  Home({
-    Key key,
-  }) : super(key: key);
+  const Home({Key? key}) : super(key: key);
+
+  // Home({
+  //   Key key,
+  // }) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -28,14 +30,14 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.red,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           onPressed: () {},
         ),
         title: Row(
           children: <Widget>[
             Expanded(
               child: IconButton(
-                icon: Icon(Icons.library_music),
+                icon: const Icon(Icons.library_music),
                 onPressed: () {
                   Navigator.pushNamed(context, "Cloud");
                 },
@@ -43,7 +45,7 @@ class _HomeState extends State<Home> {
             ),
             Expanded(
               child: IconButton(
-                icon: Icon(Icons.polymer),
+                icon: const Icon(Icons.polymer),
                 onPressed: () {
                   Navigator.pushNamed(context, "Friends");
                 },
@@ -51,16 +53,16 @@ class _HomeState extends State<Home> {
             ),
             Expanded(
                 child: IconButton(
-                icon: Icon(Icons.play_circle_outline),
-                onPressed: () {
-                  Navigator.pushNamed(context, "First");
-                },
+              icon: const Icon(Icons.play_circle_outline),
+              onPressed: () {
+                Navigator.pushNamed(context, "First");
+              },
             ))
           ],
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.pool),
+            icon: const Icon(Icons.pool),
             onPressed: () {},
           )
         ],
@@ -70,10 +72,10 @@ class _HomeState extends State<Home> {
 
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(left: 4.0, bottom: 4.0, right: 4.0),
+          padding: const EdgeInsets.only(left: 4.0, bottom: 4.0, right: 4.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
+            children: const <Widget>[
               //资料卡片区域
               NameCard(),
               MenuList(),
