@@ -32,7 +32,7 @@ class NameCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Container(
-                        child: Text(
+                        child: const Text(
                           "降世神通",
                           style: TextStyle(
                               fontSize: 18.0,
@@ -40,12 +40,12 @@ class NameCard extends StatelessWidget {
                               fontWeight: FontWeight.w600),
                         ),
                         height: 30.0,
-                        padding: EdgeInsets.only(left: 8.0),
+                        padding: const EdgeInsets.only(left: 8.0),
                       ),
                       Container(
-                        child: Text("最后的气宗Avatar"),
+                        child: const Text("最后的气宗Avatar"),
                         height: 20.0,
-                        padding: EdgeInsets.only(left: 8.0),
+                        padding: const EdgeInsets.only(left: 8.0),
                       )
                     ],
                   ),
@@ -54,7 +54,7 @@ class NameCard extends StatelessWidget {
                   height: 24.0,
                   width: 72.0,
                   child: OutlinedButton(
-                    child: Text(
+                    child: const Text(
                       "开通会员",
                       style: TextStyle(
                         color: Colors.red,
@@ -67,16 +67,16 @@ class NameCard extends StatelessWidget {
                 )
               ]),
             ),
-            Divider(
+            const Divider(
               height: 8.0,
             ),
-            Container(
+            SizedBox(
               height: 20.0,
               child: RawMaterialButton(
                 onPressed: () {},
-                padding: EdgeInsets.all(0.0),
+                padding: const EdgeInsets.all(0.0),
                 child: Row(
-                  children: <Widget>[
+                  children: const <Widget>[
                     Expanded(
                       child: Text(
                         "黑胶VIP首开低至9元",
