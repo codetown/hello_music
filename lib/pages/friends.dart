@@ -14,10 +14,10 @@ class Friends extends StatefulWidget {
   // always marked "final".
 
   @override
-  _FriendsState createState() => _FriendsState();
+  FriendsState createState() => FriendsState();
 }
 
-class _FriendsState extends State<Friends> {
+class FriendsState extends State<Friends> {
   List _friendList = [];
   @override
   Widget build(BuildContext context) {

@@ -16,10 +16,10 @@ class Cloud extends StatefulWidget {
   // always marked "final".
 
   @override
-  _CloudState createState() => _CloudState();
+  CloudState createState() => CloudState();
 }
 
-class _CloudState extends State<Cloud> {
+class CloudState extends State<Cloud> {
   @override
   Widget build(BuildContext context) {
     //double cxtWidth = MediaQuery.of(context).size.width;

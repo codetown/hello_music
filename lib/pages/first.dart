@@ -17,23 +17,14 @@ class First extends StatefulWidget {
   // always marked "final".
 
   @override
-  _FirstState createState() => _FirstState();
+  FirstState createState() => FirstState();
 }
 
-class _FirstState extends State<First> {
-  List<dynamic> _sliderList = [];
+class FirstState extends State<First> {
   List<dynamic> swipers = [];
   List<dynamic> modules = [];
   @override
   Widget build(BuildContext context) {
-    _sliderList = [
-      {"image": "ad01.jpg"},
-      {"image": "ad02.jpg"},
-      {"image": "ad03.jpg"},
-      {"image": "ad04.jpg"},
-      {"image": "ad05.jpg"},
-      {"image": "ad06.jpg"},
-    ];
     double cxtWidth = MediaQuery.of(context).size.width;
     double almWidth = (cxtWidth - 64.00) / 3.00;
     return Scaffold(
