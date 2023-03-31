@@ -22,7 +22,7 @@ class NameCard extends StatelessWidget {
               child: Row(children: <Widget>[
                 ClipOval(
                   child: Image.network(
-                    "${Utils.baseUrl}/flmall/timg.jpg",
+                    "${Utils.baseUrl}rxq.jpg",
                     height: 50.0,
                     width: 50.0,
                   ),
@@ -32,6 +32,8 @@ class NameCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Container(
+                        height: 22.0,
+                        padding: const EdgeInsets.only(left: 8.0),
                         child: const Text(
                           "降世神通",
                           style: TextStyle(
@@ -39,26 +41,26 @@ class NameCard extends StatelessWidget {
                               height: 1.0,
                               fontWeight: FontWeight.w600),
                         ),
-                        height: 30.0,
-                        padding: const EdgeInsets.only(left: 8.0),
                       ),
                       Container(
-                        child: const Text("最后的气宗Avatar"),
-                        height: 20.0,
+                        height: 18.0,
                         padding: const EdgeInsets.only(left: 8.0),
+                        child: const Text("最后的气宗Avatar"),
                       )
                     ],
                   ),
                 ),
                 SizedBox(
                   height: 24.0,
-                  width: 72.0,
+                  width: 80.0,
                   child: OutlinedButton(
                     child: const Text(
                       "开通会员",
+                      maxLines: 1,
                       style: TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.normal,
+                        fontSize: 12,
                         height: 1.0,
                       ),
                     ),

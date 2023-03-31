@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:hello_music/items/music_bill.dart';
-// import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:hello_music/utils.dart';
 
 class First extends StatefulWidget {
@@ -20,16 +21,18 @@ class First extends StatefulWidget {
 }
 
 class _FirstState extends State<First> {
-  List _sliderList = [];
+  List<dynamic> _sliderList = [];
+  List<dynamic> swipers = [];
+  List<dynamic> modules = [];
   @override
   Widget build(BuildContext context) {
     _sliderList = [
-      {"image": "guanggao0.jpg"},
-      {"image": "guanggao1.jpg"},
-      {"image": "guanggao2.jpg"},
-      {"image": "guanggao3.jpg"},
-      {"image": "guanggao4.jpg"},
-      {"image": "guanggao5.jpg"},
+      {"image": "ad01.jpg"},
+      {"image": "ad02.jpg"},
+      {"image": "ad03.jpg"},
+      {"image": "ad04.jpg"},
+      {"image": "ad05.jpg"},
+      {"image": "ad06.jpg"},
     ];
     double cxtWidth = MediaQuery.of(context).size.width;
     double almWidth = (cxtWidth - 64.00) / 3.00;
@@ -98,29 +101,27 @@ class _FirstState extends State<First> {
                 ),
               ),
               padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-              // child: ClipRRect(
-              //   borderRadius: BorderRadius.circular(5.0),
-              //   child: Swiper(
-              //     itemBuilder: (BuildContext context, int index) {
-              //       return Image.network(
-              //         "${Utils.baseUrl}/music/" + _sliderList[index]["image"],
-              //         width: cxtWidth - 16.0,
-              //         height: cxtWidth * 0.382,
-              //         fit: BoxFit.fill,
-              //       );
-              //     },
-              //     itemCount: _sliderList.length,
-              //     pagination: const SwiperPagination(
-              //       margin: EdgeInsets.only(bottom: 16.0),
-              //       builder: DotSwiperPaginationBuilder(
-              //         size: 16.0,
-              //         activeSize: 16.0,
-              //         color: Color(0x99ffffff),
-              //         activeColor: Colors.red,
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              child: CarouselSlider(
+                options: CarouselOptions(
+                  autoPlay: true,
+                  viewportFraction: 1,
+                  aspectRatio: 2.3,
+                ),
+                items: [
+                  for (int i = 0; i < 6; ++i)
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Image.network(
+                          "https://gitee.com/codetown/my-win/raw/master/assets/codedata/music/ad0${i + 1}.jpg",
+                          width: cxtWidth - 32,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    )
+                ],
+              ),
             ),
             Row(
               children: <Widget>[
@@ -228,37 +229,37 @@ class _FirstState extends State<First> {
                 children: <Widget>[
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "${Utils.baseUrl}/music/zjl.jpg",
+                    imgUrl: "${Utils.baseUrl}zjl.jpg",
                     title: "窗外的麻雀在电线杆上多嘴，你说这一句很有夏天的感觉",
                     visits: 550,
                   ),
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "${Utils.baseUrl}/music/ljj.jpg",
+                    imgUrl: "${Utils.baseUrl}ljj.jpg",
                     title: "确认过眼神你遇上对的人，我挥剑转身而坚决如红尘",
                     visits: 346,
                   ),
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "${Utils.baseUrl}/music/zcx.jpg",
+                    imgUrl: "${Utils.baseUrl}zcx.jpg",
                     title: "依然记得从你眼中滑落的泪坚决如铁，灰暗中种烈日灼身的错觉",
                     visits: 550,
                   ),
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "${Utils.baseUrl}/music/rxq.jpg",
+                    imgUrl: "${Utils.baseUrl}rxq.jpg",
                     title: "窗外的麻雀在电线杆上多嘴,你说这一句很有夏天的感觉",
                     visits: 550,
                   ),
                   MusicBill(
                     width: almWidth,
-                    imgUrl: "${Utils.baseUrl}/music/zhk.jpg",
+                    imgUrl: "${Utils.baseUrl}zhk.jpg",
                     title: "就是你最爱的歌曲怎么舍得我难过的夜晚怎么不可能",
                     visits: 550,
                   ),
                   MusicBill(
                     width: (almWidth).floorToDouble(),
-                    imgUrl: "${Utils.baseUrl}/music/wyt.jpg",
+                    imgUrl: "${Utils.baseUrl}wyt.jpg",
                     title: "我的世界里曾经有你，不需要任何感激",
                     visits: 550,
                   ),

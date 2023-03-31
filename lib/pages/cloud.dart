@@ -102,7 +102,7 @@ class _CloudState extends State<Cloud> {
                         child: Row(children: <Widget>[
                           ClipOval(
                             child: Image.network(
-                              "${Utils.baseUrl}/flmall/timg.jpg",
+                              "${Utils.baseUrl}/wyt.jpg",
                               height: 50.0,
                               width: 50.0,
                             ),
@@ -112,6 +112,8 @@ class _CloudState extends State<Cloud> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Container(
+                                  height: 30.0,
+                                  padding: const EdgeInsets.only(left: 8.0),
                                   child: const Text(
                                     "降世神通",
                                     style: TextStyle(
@@ -119,26 +121,26 @@ class _CloudState extends State<Cloud> {
                                         height: 1.0,
                                         fontWeight: FontWeight.w600),
                                   ),
-                                  height: 30.0,
-                                  padding: const EdgeInsets.only(left: 8.0),
                                 ),
                                 Container(
-                                  child: const Text("最后的气宗Avatar"),
                                   height: 20.0,
                                   padding: const EdgeInsets.only(left: 8.0),
+                                  child: const Text("最后的气宗Avatar"),
                                 )
                               ],
                             ),
                           ),
                           SizedBox(
                             height: 24.0,
-                            width: 72.0,
+                            width: 80.0,
                             child: OutlinedButton(
                               child: const Text(
                                 "开通会员",
+                                maxLines: 1,
                                 style: TextStyle(
                                   color: Colors.red,
                                   fontWeight: FontWeight.normal,
+                                  fontSize: 12,
                                   height: 1.0,
                                 ),
                               ),
@@ -270,7 +272,7 @@ class _CloudState extends State<Cloud> {
                 bottom: 4.0,
               ),
               child: const MusicItem(
-                imgUrl: "${Utils.baseUrl}/music/zhk.jpg",
+                imgUrl: "${Utils.baseUrl}zhk.jpg",
                 title: "我喜欢的音乐",
                 subtitle: "25首",
               ),
@@ -280,7 +282,7 @@ class _CloudState extends State<Cloud> {
               padding: const EdgeInsets.only(
                   left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: const MusicItem(
-                imgUrl: "${Utils.baseUrl}/music/zcx.jpg",
+                imgUrl: "${Utils.baseUrl}zcx.jpg",
                 title: "最平凡的伤感",
                 subtitle: "50首",
               ),
@@ -290,7 +292,7 @@ class _CloudState extends State<Cloud> {
               padding: const EdgeInsets.only(
                   left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: const MusicItem(
-                imgUrl: "${Utils.baseUrl}/music/rxq.jpg",
+                imgUrl: "${Utils.baseUrl}rxq.jpg",
                 title: "最简单的快乐",
                 subtitle: "66首",
               ),
@@ -300,7 +302,7 @@ class _CloudState extends State<Cloud> {
               padding: const EdgeInsets.only(
                   left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: const MusicItem(
-                imgUrl: "${Utils.baseUrl}/music/zjl.jpg",
+                imgUrl: "${Utils.baseUrl}zjl.jpg",
                 title: "周杰伦",
                 subtitle: "103首",
               ),
@@ -310,7 +312,7 @@ class _CloudState extends State<Cloud> {
               padding: const EdgeInsets.only(
                   left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
               child: const MusicItem(
-                imgUrl: "${Utils.baseUrl}/music/ljj.jpg",
+                imgUrl: "${Utils.baseUrl}ljj.jpg",
                 title: "林俊杰",
                 subtitle: "112首",
               ),

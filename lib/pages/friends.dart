@@ -47,7 +47,7 @@ class _FriendsState extends State<Friends> {
             padding: const EdgeInsets.all(8.0),
             child: FriendItem(
               imgUrl:
-                  "https://gitee.com/codetown/codedata/raw/master/flmall/timg.jpg",
+                  "https://gitee.com/codetown/my-win/raw/master/assets/codedata/avatars/avt101.jpg",
               title: _friendList[index]['title'],
               subtitle: _friendList[index]['subtitle'],
             ),
