@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class FriendItem extends StatelessWidget {
   const FriendItem(
-      {Key? key, this.imgUrl = "", this.title = "", this.subtitle = ""})
-      : super(key: key);
+      {super.key, this.imgUrl = "", this.title = "", this.subtitle = ""});
   final String imgUrl;
   final String title;
   final String subtitle;

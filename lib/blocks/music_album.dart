@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_music/items/music_item.dart';
 
 class MusicAlbum extends StatelessWidget {
-  const MusicAlbum({Key? key}) : super(key: key);
+  const MusicAlbum({super.key});
 
   @override
   Widget build(BuildContext context) {

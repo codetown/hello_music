@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_music/utils.dart';
 
 class NameCard extends StatelessWidget {
-  const NameCard({Key? key}) : super(key: key);
+  const NameCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,6 @@ class NameCard extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 24.0,
-                  width: 80.0,
                   child: OutlinedButton(
                     child: const Text(
                       "开通会员",
@@ -77,8 +76,8 @@ class NameCard extends StatelessWidget {
               child: RawMaterialButton(
                 onPressed: () {},
                 padding: const EdgeInsets.all(0.0),
-                child: Row(
-                  children: const <Widget>[
+                child: const Row(
+                  children: <Widget>[
                     Expanded(
                       child: Text(
                         "黑胶VIP首开低至9元",

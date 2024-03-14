@@ -4,7 +4,7 @@ import 'package:hello_music/items/music_item.dart';
 import 'package:hello_music/utils.dart';
 
 class Cloud extends StatefulWidget {
-  const Cloud({Key? key}) : super(key: key);
+  const Cloud({super.key});
 
   // This widget is the Cloud page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -132,7 +132,6 @@ class CloudState extends State<Cloud> {
                           ),
                           SizedBox(
                             height: 24.0,
-                            width: 80.0,
                             child: OutlinedButton(
                               child: const Text(
                                 "开通会员",
@@ -157,8 +156,8 @@ class CloudState extends State<Cloud> {
                         child: RawMaterialButton(
                           onPressed: () {},
                           padding: const EdgeInsets.all(0.0),
-                          child: Row(
-                            children: const <Widget>[
+                          child: const Row(
+                            children: <Widget>[
                               Expanded(
                                 child: Text(
                                   "黑胶VIP首开低至9元",

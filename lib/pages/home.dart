@@ -4,7 +4,7 @@ import 'package:hello_music/blocks/menu_list.dart';
 import 'package:hello_music/blocks/music_album.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   // Home({
   //   Key key,
@@ -73,9 +73,9 @@ class HomeState extends State<Home> {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.only(left: 4.0, bottom: 4.0, right: 4.0),
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const <Widget>[
+            children: <Widget>[
               //资料卡片区域
               NameCard(),
               MenuList(),

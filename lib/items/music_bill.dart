@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 
 class MusicBill extends StatelessWidget {
   const MusicBill(
-      {Key? key,
+      {super.key,
       required this.width,
       this.imgUrl = "",
       this.visits = 0,
-      this.title = ""})
-      : super(key: key);
+      this.title = ""});
   final double width;
   final String imgUrl;
   final int visits;

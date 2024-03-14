@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_music/items/friend_item.dart';
 
 class Friends extends StatefulWidget {
-  const Friends({Key? key}) : super(key: key);
+  const Friends({super.key});
 
   // This widget is the Friends page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect

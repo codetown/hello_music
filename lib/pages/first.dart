@@ -5,7 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:hello_music/utils.dart';
 
 class First extends StatefulWidget {
-  const First({Key? key}) : super(key: key);
+  const First({super.key});
 
   // This widget is the First page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect

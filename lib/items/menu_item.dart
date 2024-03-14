@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 
 class MenuItem extends StatelessWidget {
   const MenuItem(
-      {Key? key,
+      {super.key,
       required this.iconData,
       this.iconColor = Colors.grey,
       this.title = '',
       this.count = 0,
-      this.titleColor = const Color(0xff555555)})
-      : super(key: key);
+      this.titleColor = const Color(0xff555555)});
   final IconData iconData;
   final Color iconColor;
   final String title;

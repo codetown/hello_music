@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_music/items/menu_item.dart';
 
 class MenuList extends StatelessWidget {
-  const MenuList({Key? key}) : super(key: key);
+  const MenuList({super.key});
   @override
   Widget build(BuildContext context) {
     return Card(
